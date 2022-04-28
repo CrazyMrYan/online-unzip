@@ -29,7 +29,7 @@
 
 <script>
 import JSZip from "jszip";
-import { image, text, settleDocuments } from "../utils/processFile";
+import { image, text, settleDocuments, PDF } from "../utils/processFile";
 import {
   queryFileType,
   processIgnoreFolder,
@@ -92,9 +92,10 @@ export default {
         fileInfo = await text(FileInformationSet, file);
         fileInfo.codeFormat = getFileNameExtension(file.id);
         console.log(fileInfo);
+      } else if (queryFileType(file.id, "pdf")) {
+        fileInfo = await PDF(FileInformationSet, file);
       }
       this.fileInfo = fileInfo;
-      console.log(this.fileInfo);
       this.showDialog = true;
       this.loading = false;
     },
