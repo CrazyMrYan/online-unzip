@@ -15,8 +15,9 @@
 <script>
 import ImageCom from "./theme/Image.vue";
 import TextCom from "./theme/Text.vue";
+import PDF from "./theme/PDF.vue";
+
 export default {
-  components: { ImageCom },
   props: {
     visible: {
       type: Boolean,
@@ -35,6 +36,7 @@ export default {
     fileComponent: {
       image: ImageCom,
       text: TextCom,
+      pdf: PDF,
     },
   }),
   methods: {

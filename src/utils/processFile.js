@@ -15,10 +15,14 @@ export const image = async (fliesList, file) => {
 };
 
 export const text = async (fliesList, file) => {
-  console.log(fliesList[file.name]);
   const content = await fliesList[file.name]?.async("string");
-  console.log(content);
   return new CreateFileInfo("text", file.id, content);
+};
+
+export const PDF = async (fliesList, file) => {
+  const fileInfo = await fliesList[file.name]?.async("blob");
+  const content = fileInfo.arrayBuffer();
+  return new CreateFileInfo("pdf", file.id, await content, fileInfo.size);
 };
 
 export const settleDocuments = (file, fileName) => {
