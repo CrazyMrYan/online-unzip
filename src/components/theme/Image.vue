@@ -15,9 +15,6 @@ export default {
 
 <style lang="less" scoped>
 img {
-  // width: 100%;
-  // min-width: 30vw;
-  width: 400px;
-  height: 400px;
+  width: 30vw;
 }
 </style>
