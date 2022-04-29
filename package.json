@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "dayjs": "^1.11.1",
     "highlight.js": "^11.5.1",
     "jszip": "^3.9.1",
     "pdfjs-dist": "^2.13.216",

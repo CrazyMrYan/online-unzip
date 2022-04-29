@@ -19,7 +19,12 @@ export default {
 pre {
   padding: 0 10px;
   box-sizing: border-box;
-  min-width: 400px;
-  height: 400px;
+  min-width: 500px;
+  min-height: 200px;
+  padding: 0 10px;
+  margin: 0;
+  code {
+    padding: 0 10px !important;
+  }
 }
 </style>
